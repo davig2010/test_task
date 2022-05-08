@@ -1,0 +1,3 @@
+scp   /home/ubuntu/wordpress.conf   :/home/operator33/www/
+scp   /home/ubuntu/docker-compose.yml   :/home/operator33/www/
+

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  wordpress:
+    image: wordpress:php7.3-fpm-alpine
+    volumes:
+      - /var/wordpress/uploads:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: server_ip:3306
+      MYSQL_ROOT_PASSWORD: 
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wp-user
+      WORDPRESS_DB_PASSWORD: 123456
+      WORDPRESS_TABLE_PREFIX: wp_
+    ports:
+      - "9001:9000"
+    restart: always
+  
